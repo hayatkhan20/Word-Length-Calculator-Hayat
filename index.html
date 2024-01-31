@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Length Calculator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 20px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Word Length Calculator</h1>
+    <label for="wordInput">Enter a word:</label>
+    <input type="text" id="wordInput" placeholder="Type a word">
+    <button id="calculateButton">Calculate Length</button>
+    <p id="result">Word length will be displayed here.</p>
+
+    <script>
+        function calculateWordLength() {
+            var inputElement = document.getElementById('wordInput');
+            var word = inputElement.value;
+            var wordLength = word.length;
+            var resultElement = document.getElementById('result');
+            resultElement.textContent = 'The length of the word is: ' + wordLength;
+        }
+
+        var calculateButton = document.getElementById('calculateButton');
+        calculateButton.addEventListener('click', calculateWordLength);
+    </script>
+</body>
+</html>
